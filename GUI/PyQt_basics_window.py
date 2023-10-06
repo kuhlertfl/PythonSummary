@@ -4,8 +4,9 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QLa
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QIcon, QPixmap
 import sys 
+import time 
 #create a class that inherits from QMainWindow
-
+#create a window with basic button and connected function 
 class MyWindow(QMainWindow):
 
     def __init__(self):
@@ -27,7 +28,9 @@ class MyWindow(QMainWindow):
         self.button1.clicked.connect(self.buttonfunction)
 
     def buttonfunction(self):
-        self.label.setText("you presses the button")
+        self.label.setText("you pressed the button")
+        
+        
         self.update()
     #update the size of the widget t fit in the content
     def update(self):
